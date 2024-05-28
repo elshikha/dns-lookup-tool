@@ -26,3 +26,4 @@ This is a Python script for performing DNS lookups and retrieving WHOIS informat
 - Now:
    ```bash
    dns-lookup
+![dns-lookup-tool runtime](runtime.jpg)
