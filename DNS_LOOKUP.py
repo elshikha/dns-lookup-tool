@@ -9,7 +9,7 @@ import sys
 
 init()  
 
-def format_output(text, color=Fore.WHITE, delay=0.05):
+def format_output(text, color=Fore.WHITE, delay=0.02):
     """Format the output with color, delay, and a hacker-like font"""
     font = "\033[1m"  
     for char in text:
