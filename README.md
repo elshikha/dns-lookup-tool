@@ -22,7 +22,7 @@ This is a Python script for performing DNS lookups and retrieving WHOIS informat
 ## Usage
 - Make An Alias
    ```bash
-   alias dns-lookup='python /dns-lookup-tool/dns_lookup.py'
+   alias dns-lookup='python /dns-lookup-tool/DNS_LOOKUP.py'
 - Now:
    ```bash
    dns-lookup
