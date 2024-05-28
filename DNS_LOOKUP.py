@@ -7,11 +7,11 @@ import os
 import io
 import sys
 
-init()  # Initialize Colorama for cross-platform color support
+init()  
 
 def format_output(text, color=Fore.WHITE, delay=0.05):
     """Format the output with color, delay, and a hacker-like font"""
-    font = "\033[1m"  # Bold font
+    font = "\033[1m"  
     for char in text:
         print(color + font + char, end="", flush=True)
         time.sleep(delay)
@@ -33,7 +33,7 @@ def print_palestine_flag_text(text):
         print(color + line)
     print(Style.RESET_ALL)
 
-# Print the colorful ASCII art at the beginning
+
 print_rainbow_text(r"""
   ____     _   _    ____     _       U  ___ u   U  ___ u   _  __      _   _   ____       
  |  _"\   | \ |"|  / __"| u |"|       \/"_ \/    \/"_ \/  |"|/ /   U |"|u| |U|  _"\ u    
@@ -91,10 +91,10 @@ def main():
         if website.lower() == "q":
             break
 
-        # Create a StringIO buffer to capture the output
+        
         output_buffer = io.StringIO()
         
-        # Redirect stdout to a DualWriter that writes to both the terminal and the buffer
+        
         original_stdout = sys.stdout
         sys.stdout = DualWriter(original_stdout, output_buffer)
 
@@ -136,7 +136,6 @@ def main():
         else:
             format_output(f"WHOIS information not retrieved for {website}.", Fore.YELLOW)
 
-        # Reset stdout to the default
         sys.stdout = original_stdout
 
         save_output = input(Fore.RED + "Do you want to save the output to a file? (y/n) " + Style.RESET_ALL)
@@ -145,7 +144,6 @@ def main():
             if not filename:
                 filename = "DNS_LOOKUP.txt"
             with open(filename, "w") as file:
-                # Write the current date and time to the file
                 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 file.write(f"Output for {website} on {current_time}:\n\n")
                 file.write(output_buffer.getvalue())
@@ -156,7 +154,7 @@ def main():
         if continue_search.lower() != "y":
             break
 
-    # Final message with Palestine flag colors
+    
     print_palestine_flag_text(r"""
   _____ ____  _____ _____   ____   _    _     _____ ____ _____ ___ _   _ _____  
  |  ___|  _ \| ____| ____| |  _ \ / \  | |   | ____/ ___|_   _|_ _| \ | | ____| 
