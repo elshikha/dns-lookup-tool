@@ -12,7 +12,7 @@ This is a Python script for performing DNS lookups and retrieving WHOIS informat
 ## Installation
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/dns-lookup-tool.git
+   git clone https://github.com/elshikha/dns-lookup-tool.git
 2. Navigate to the project directory:
    ```bash
    cd dns-lookup-tool
